@@ -1,35 +1,36 @@
 function Card(props) {
-  let badgeText
-  if (props.travel.openSpots === 'done') {
-    badgeText = 'done'
-  } else if (props.travel.place === 'planning') {
-    badgeText = 'planning'
-  }
+  //   let badgeText
+  //   if (openSpots === 'done') {
+  //     badgeText = 'done'
+  //   } else if (place === 'planning') {
+  //     badgeText = 'planning'
+  //   }
+
+  const {
+    imageUrl,
+    location,
+    googleMapsUrl,
+    startDate,
+    endDate,
+    description,
+    title,
+  } = props.travel
+
   return (
     <div className='card'>
-      {badgeText && <div className='card--badge'>{badgeText}</div>}
-      <img
-        src={props.travel.imageUrl}
-        alt='card--img'
-        className='card--image'
-      />
+      {/* {badgeText && <div className='card--badge'>{badgeText}</div>} */}
+      <img src={imageUrl} alt='card--img' className='card--image' />
       <div className='card--info'>
-        <a href={`${props.travel.googleMapsUrl}`}>View Google Maps</a>{' '}
+        <a href={`${googleMapsUrl}`}>View Google Maps</a>{' '}
         <i className='bi bi-star-fill'></i>
-        {props.travel.location && (
-          <h3 className='card--info1'>{props.travel.location}</h3>
-        )}
-        {props.travel.title && (
-          <h2 className='card--info1'>{props.travel.title}</h2>
-        )}
-        {props.travel.startDate && props.travel.endDate && (
+        {location && <h3 className='card--info1'>{location}</h3>}
+        {title && <h2 className='card--info1'>{title}</h2>}
+        {startDate && endDate && (
           <p className='card--info1'>
-            {props.travel.startDate} - {props.travel.endDate}
+            {startDate} - {endDate}
           </p>
         )}
-        {props.travel.description && (
-          <p className='card--info1'>{props.travel.description}</p>
-        )}
+        {description && <p className='card--info1'>{description}</p>}
       </div>
     </div>
   )

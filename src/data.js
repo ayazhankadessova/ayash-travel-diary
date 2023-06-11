@@ -3,7 +3,7 @@ export default [
     id: 1,
     title: 'Copenhagen Canal Tour',
     location: 'Copenhagen, Denmark',
-    googleMapsUrl: 'https://goo.gl/maps/7mT5V5Jb6XGjzU5y5',
+    googleMapsUrl: 'https://goo.gl/maps/xjApmkCq8qVyRGt38',
     startDate: '20 Jul, 2023',
     endDate: '25 Jul, 2023',
     description:
@@ -14,7 +14,7 @@ export default [
     id: 2,
     title: 'Istanbul Bosphorus Cruise',
     location: 'Istanbul, Turkey',
-    googleMapsUrl: 'https://goo.gl/maps/F-Xec8PGgZI',
+    googleMapsUrl: 'https://goo.gl/maps/xjApmkCq8qVyRGt38',
     startDate: '05 Sep, 2023',
     endDate: '10 Sep, 2023',
     description:
@@ -25,7 +25,7 @@ export default [
     id: 3,
     title: 'Issyk-kul Adventure Tour',
     location: 'Issyk-kul, Kyrgyzstan',
-    googleMapsUrl: 'https://goo.gl/maps/4kNnHsUgRwTJ8G6L8',
+    googleMapsUrl: 'https://goo.gl/maps/xjApmkCq8qVyRGt38',
     startDate: '14 Nov, 2023',
     endDate: '22 Nov, 2023',
     description:
