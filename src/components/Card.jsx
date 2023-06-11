@@ -21,8 +21,8 @@ function Card(props) {
       {/* {badgeText && <div className='card--badge'>{badgeText}</div>} */}
       <img src={imageUrl} alt='card--img' className='card--image' />
       <div className='card--info'>
-        <a href={`${googleMapsUrl}`}>View Google Maps</a>{' '}
         <i className='bi bi-star-fill'></i>
+        <a href={`${googleMapsUrl}`}>View Google Maps</a>
         {location && <h3 className='card--info1'>{location}</h3>}
         {title && <h2 className='card--info1'>{title}</h2>}
         {startDate && endDate && (

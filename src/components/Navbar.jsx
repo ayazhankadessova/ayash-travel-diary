@@ -1,8 +1,9 @@
 function Navbar() {
   return (
-    <navbar>
-      <h1>Ayazhan's travel diary</h1>
-    </navbar>
+    <header>
+      <i className='bi bi-airplane-engines'></i>
+      <p>my travel journal.</p>
+    </header>
   )
 }
 
