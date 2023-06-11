@@ -14,6 +14,7 @@ function Card(props) {
         className='card--image'
       />
       <div className='card--info'>
+        <a href={`${props.travel.googleMapsUrl}`}>View Google Maps</a>{' '}
         <i className='bi bi-star-fill'></i>
         {props.travel.location && (
           <h3 className='card--info1'>{props.travel.location}</h3>
