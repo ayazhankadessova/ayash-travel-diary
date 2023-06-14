@@ -14,7 +14,7 @@ export default [
     id: 2,
     title: 'Istanbul Bosphorus Cruise',
     location: 'Istanbul, Turkey',
-    googleMapsUrl: 'https://goo.gl/maps/xjApmkCq8qVyRGt38',
+    googleMapsUrl: 'https://goo.gl/maps/5tkSjouNrGkJtmCh9',
     startDate: '05 Sep, 2023',
     endDate: '10 Sep, 2023',
     description:
@@ -25,7 +25,7 @@ export default [
     id: 3,
     title: 'Issyk-kul Adventure Tour',
     location: 'Issyk-kul, Kyrgyzstan',
-    googleMapsUrl: 'https://goo.gl/maps/xjApmkCq8qVyRGt38',
+    googleMapsUrl: 'https://goo.gl/maps/aPFBsCh2GWDBhoCXA',
     startDate: '14 Nov, 2023',
     endDate: '22 Nov, 2023',
     description:

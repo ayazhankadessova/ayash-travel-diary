@@ -1,11 +1,4 @@
 function Card(props) {
-  //   let badgeText
-  //   if (openSpots === 'done') {
-  //     badgeText = 'done'
-  //   } else if (place === 'planning') {
-  //     badgeText = 'planning'
-  //   }
-
   const {
     imageUrl,
     location,
@@ -19,7 +12,7 @@ function Card(props) {
   return (
     <div className='card'>
       <div className='card--image--col'>
-        <img src={imageUrl} alt='card--img' className='card--image' />
+        <img src={imageUrl} alt='card--img' className='card--img' />
       </div>
       <div className='card--info--col'>
         <div className='up-section'>

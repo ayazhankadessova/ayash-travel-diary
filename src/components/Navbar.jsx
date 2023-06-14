@@ -1,8 +1,10 @@
 function Navbar() {
   return (
     <header>
-      <i className='bi bi-airplane-engines'></i>
-      <p>my travel journal.</p>
+      <div className='plane'>
+        <i className='bi bi-airplane-engines'></i>
+      </div>
+      <p className='app--title'>my travel journal.</p>
     </header>
   )
 }
