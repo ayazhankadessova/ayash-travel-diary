@@ -18,19 +18,29 @@ function Card(props) {
 
   return (
     <div className='card'>
-      {/* {badgeText && <div className='card--badge'>{badgeText}</div>} */}
-      <img src={imageUrl} alt='card--img' className='card--image' />
-      <div className='card--info'>
-        <i className='bi bi-star-fill'></i>
-        <a href={`${googleMapsUrl}`}>View Google Maps</a>
-        {location && <h3 className='card--info1'>{location}</h3>}
-        {title && <h2 className='card--info1'>{title}</h2>}
+      <div className='card--image--col'>
+        <img src={imageUrl} alt='card--img' className='card--image' />
+      </div>
+      <div className='card--info--col'>
+        <div className='up-section'>
+          <i className='bi bi-star-fill'></i>
+
+          {location && (
+            <p className='card--info--location'>
+              {location.split(',')[1].trim().toUpperCase()}
+            </p>
+          )}
+          <a className='card--location-url' href={`${googleMapsUrl}`}>
+            View Google Maps
+          </a>
+        </div>
+        {title && <h2 className='card--info--title'>{title}</h2>}
         {startDate && endDate && (
-          <p className='card--info1'>
+          <p className='card--info--date'>
             {startDate} - {endDate}
           </p>
         )}
-        {description && <p className='card--info1'>{description}</p>}
+        {description && <p className='card--info--desc'>{description}</p>}
       </div>
     </div>
   )

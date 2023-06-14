@@ -1,0 +1,237 @@
+/* ---------------------- */
+/* Fonts                  */
+/* ---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* ---------------------- */
+/* Custom properties      */
+/* ---------------------- */
+:root {
+  --clr-accent: #f55a5a;
+  --ff-main: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-text-main: #2b283a;
+    --clr-text-light: #918e9b;
+
+    --clr-background-light: #ffffff;
+  }
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-text-main: #fff;
+    --clr-text-light: #e5e5e5;
+
+    --clr-background-light: #1d1d1c;
+  }
+}
+
+/* ---------------------- */
+/* Reset                  */
+/* ---------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------- */
+/* Typography             */
+/* ---------------------- */
+
+html {
+  font-family: var(--ff-main);
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-background-light);
+  scroll-behavior: smooth;
+}
+
+.grey {
+  color: var(--clr-text-light);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* ---------------------- */
+/* Components             */
+/* ---------------------- */
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 0;
+  color: var(--clr-background-light);
+  background-color: var(--clr-accent);
+  gap: 0.5em;
+}
+
+.nav--link-home {
+  text-decoration: none;
+  color: inherit;
+}
+.nav--title {
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: -0.075em;
+}
+.nav--logo {
+  height: 2em;
+}
+
+/* CARD */
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4em 3em;
+}
+
+.card {
+  color: var(--clr-text-main);
+  display: flex;
+  flex-direction: row;
+  padding: 2em 0;
+}
+
+.card--img {
+  height: 100%;
+  /* width: 20vw; */
+  width: 20em;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.3em;
+
+  transform: scale(1);
+  transition: all 650ms ease-in-out;
+}
+
+.card--img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+  /* filter: brightness(80%); */
+}
+
+.card--infos {
+  margin-left: 1em;
+  padding: 0.5em;
+}
+
+.card--location-icon {
+  color: var(--clr-accent);
+}
+
+.card--location {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin: 0 1em 0 0.25em;
+  color: var(--clr-text-main);
+}
+
+.card--location-url {
+  color: var(--clr-text-light);
+  font-size: 0.75rem;
+}
+
+.card--title {
+  font-size: 2rem;
+  margin: 0.25em 0;
+  font-weight: 700;
+}
+
+.card--date {
+  font-weight: 700;
+}
+
+.card--description {
+  max-width: 50rem;
+  margin-top: 2em;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 150%;
+}
+
+/* Dynamic cards divider  */
+
+.cards-list > .card + .card {
+  padding: 2em 0;
+  border-top: 1px solid var(--clr-text-light);
+}
+
+.cards-list .card:first-child {
+  padding-top: 0;
+}
+
+.cards-list .card:last-child {
+  padding-bottom: 0;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 1.25em 2.25em;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--clr-accent);
+  color: var(--clr-background-light);
+}
+
+.footer--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer--link:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card--img {
+    width: 100%;
+  }
+
+  .card--infos {
+    margin: 1em 0 0 0;
+    padding: 0;
+  }
+}

@@ -21,11 +21,49 @@ header p {
   font-size: 0.875rem; /* 14px */
 }
 
-.card {
-  padding: 2em;
+.cards--container {
   display: flex;
+  flex-direction: column;
+  padding: 4em 3em;
 }
-.card--image {
+
+.card {
   display: flex;
-  max-height: 200px;
+  flex-direction: row;
+  padding: 2em 0;
+}
+
+.card img {
+  height: 100%;
+  /* width: 20vw; */
+  width: 20em;
+  /* aspect-ratio: 16 / 9; */
+  object-fit: cover;
+  border-radius: 0.3em;
+
+  transform: scale(1);
+  transition: all 650ms ease-in-out;
+}
+
+.card--info--col {
+  margin-left: 1em;
+  padding: 0.5em;
+}
+
+/* .up-section {
+  display: flex;
+  align-items: center;
+  gap: 0.3125em;
+} */
+.card--info--location {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin: 0 1em 0 0.25em;
+  color: var(--clr-text-main);
+}
+
+.card--location-url {
+  font-size: 0.75rem;
 }
